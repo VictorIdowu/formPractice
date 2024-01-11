@@ -94,7 +94,12 @@ export default function Signup() {
         >
           What best describes your role?
         </label>
-        <select id="role" name="role">
+
+        <select
+          className="block w-full max-w-[15rem] p-2 text-base rounded border border-solid border-[#758a8a] bg-[#869999] text-[#142020]"
+          id="role"
+          name="role"
+        >
           <option value="student">Student</option>
           <option value="teacher">Teacher</option>
           <option value="employee">Employee</option>
@@ -103,43 +108,50 @@ export default function Signup() {
         </select>
       </div>
 
-      <fieldset>
+      <fieldset className="mb-4">
         <legend>How did you find us?</legend>
-        <div className="mb-4">
+        <div className="mb-4 flex items-center">
           <input
-            className="block w-full max-w-[15rem] p-2 text-base border border-solid border-[#758a8a] bg-[#869999] text-[#142020]"
+            className="inline-block w-auto mr-2 border-none bg-transparent text-[#d9e2f1]"
             type="checkbox"
             id="google"
             name="acquisition"
             value="google"
           />
           <label
-            className="block text-sm mb-1 text-[#9bafaf] uppercase font-bold"
+            className="block text-sm  text-[#9bafaf] uppercase font-bold"
             htmlFor="google"
           >
             Google
           </label>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 flex items-center">
           <input
+            className="inline-block w-auto mr-2 border-none bg-transparent text-[#d9e2f1]"
             type="checkbox"
             id="friend"
             name="acquisition"
             value="friend"
           />
           <label
-            className="block text-sm mb-1 text-[#9bafaf] uppercase font-bold"
+            className="block text-sm  text-[#9bafaf] uppercase font-bold"
             htmlFor="friend"
           >
             Referred by friend
           </label>
         </div>
 
-        <div className="mb-4">
-          <input type="checkbox" id="other" name="acquisition" value="other" />
+        <div className="mb-4 flex items-center">
+          <input
+            className="inline-block w-auto mr-2 border-none bg-transparent text-[#d9e2f1]"
+            type="checkbox"
+            id="other"
+            name="acquisition"
+            value="other"
+          />
           <label
-            className="block text-sm mb-1 text-[#9bafaf] uppercase font-bold"
+            className="block text-sm  text-[#9bafaf] uppercase font-bold"
             htmlFor="other"
           >
             Other
@@ -147,13 +159,18 @@ export default function Signup() {
         </div>
       </fieldset>
 
-      <div className="mb-4">
+      <div className="mb-4 flex items-center">
         <label
-          className="block text-sm mb-1 text-[#9bafaf] uppercase font-bold"
+          className="block text-sm text-[#9bafaf] uppercase font-bold"
           htmlFor="terms-and-conditions"
         >
-          <input type="checkbox" id="terms-and-conditions" name="terms" />I
-          agree to the terms and conditions
+          <input
+            className="inline-block w-auto mr-2 border-none bg-transparent text-[#d9e2f1]"
+            type="checkbox"
+            id="terms-and-conditions"
+            name="terms"
+          />
+          I agree to the terms and conditions
         </label>
       </div>
 
