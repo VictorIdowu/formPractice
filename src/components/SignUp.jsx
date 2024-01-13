@@ -3,8 +3,10 @@ import { useState } from "react";
 export default function Signup() {
   return (
     <form className="w-[90%] mx-auto max-w-[40rem] my-12 p-8 bg-gradient-to-b from-[#253c3c] to-[#1d4949] rounded-lg shadow-lg">
-      <h2>Welcome on board!</h2>
-      <p>We just need a little bit of data from you to get you started 🚀</p>
+      <h2 className="text-2xl mb-2">Welcome on board!</h2>
+      <p className="mb-6">
+        We just need a little bit of data from you to get you started 🚀
+      </p>
 
       <div className="mb-4">
         <label
