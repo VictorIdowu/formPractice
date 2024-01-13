@@ -55,7 +55,7 @@ export default function Signup() {
         </div>
       </div>
 
-      <hr />
+      <hr className="mb-6" />
 
       <div className="flex flex-wrap justify-start gap-4">
         <div className="mb-4">
@@ -110,7 +110,7 @@ export default function Signup() {
         </select>
       </div>
 
-      <fieldset className="mb-4">
+      <fieldset className="mb-4 py-3">
         <legend>How did you find us?</legend>
         <div className="mb-4 flex items-center">
           <input
