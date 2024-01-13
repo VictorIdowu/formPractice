@@ -1,6 +1,15 @@
 import { useState } from "react";
 
 export default function Signup() {
+  const [enteredDetails, setEnteredDetails] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+    firstName: "",
+    lastName: "",
+    role: "",
+  });
+
   return (
     <form className="w-[90%] mx-auto max-w-[40rem] my-12 p-8 bg-gradient-to-b from-[#253c3c] to-[#1d4949] rounded-lg shadow-lg">
       <h2 className="text-2xl mb-2">Welcome on board!</h2>
