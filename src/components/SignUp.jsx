@@ -3,7 +3,10 @@ import { useState } from "react";
 const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = new FormData(e.target);
+    const formData = new FormData(e.target);
+    const acquisitionChannel = formData.getAll("acquisition");
+    const data = Object.fromEntries(formData.entries());
+    data.acquisition = acquisitionChannel;
     console.log(data);
   };
 
