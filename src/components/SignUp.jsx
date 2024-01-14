@@ -1,13 +1,21 @@
 import { useState } from "react";
 
 const Signup = () => {
+  const [passwordMatch, setPasswordMatch] = useState(true);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const acquisitionChannel = formData.getAll("acquisition");
     const data = Object.fromEntries(formData.entries());
     data.acquisition = acquisitionChannel;
+
+    if (data.password !== data["confirm-password"])
+      return setPasswordMatch(false);
+
     console.log(data);
+    setPasswordMatch(true);
+    // e.target.reset();
   };
 
   return (
@@ -32,6 +40,7 @@ const Signup = () => {
           id="email"
           type="email"
           name="email"
+          required
         />
       </div>
 
@@ -48,6 +57,8 @@ const Signup = () => {
             id="password"
             type="password"
             name="password"
+            required
+            minLength={8}
           />
         </div>
 
@@ -63,7 +74,12 @@ const Signup = () => {
             id="confirm-password"
             type="password"
             name="confirm-password"
+            required
+            minLength={8}
           />
+          <div className="text-[#ffca99] text-sm h-8 py-2">
+            {!passwordMatch && <p className="">Passwords must match!</p>}
+          </div>
         </div>
       </div>
 
@@ -82,6 +98,7 @@ const Signup = () => {
             type="text"
             id="first-name"
             name="first-name"
+            required
           />
         </div>
 
@@ -97,6 +114,7 @@ const Signup = () => {
             type="text"
             id="last-name"
             name="last-name"
+            required
           />
         </div>
       </div>
@@ -183,6 +201,7 @@ const Signup = () => {
             type="checkbox"
             id="terms-and-conditions"
             name="terms"
+            required
           />
           I agree to the terms and conditions
         </label>
