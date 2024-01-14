@@ -1,25 +1,10 @@
 import { useState } from "react";
 
-export default function Signup() {
-  const [enteredDetails, setEnteredDetails] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-    firstName: "",
-    lastName: "",
-    role: "",
-  });
-
-  const handleSubmit = (e) => {
+const Signup = () => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(enteredDetails);
-  };
-
-  const handleChange = (input, e) => {
-    setEnteredDetails((prev) => ({
-      ...prev,
-      input,
-    }));
+    const data = new FormData(e.target);
+    console.log(data);
   };
 
   return (
@@ -216,4 +201,5 @@ export default function Signup() {
       </p>
     </form>
   );
-}
+};
+export default Signup;
